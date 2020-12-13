@@ -31,3 +31,4 @@ services:
 networks:
   prometheus:
 volumes:
+  prometheus_data:
