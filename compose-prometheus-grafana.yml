@@ -5,7 +5,7 @@ services:
   promethueus:
     image: prom/prometheus:latest
     volumes:
-      - ./prometheus/:/etc/prometheus/
+      - ./prometheus/:/etc/prometheos/
       - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
