@@ -16,6 +16,18 @@ services:
       - 9090:9090
     networks:
       - prometheus
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    networks:
+      - prometheus
+    volumes:
+      - ./data/:/var/lib/grafana
+    user: "0"
+
+
 networks:
   prometheus:
 volumes:
