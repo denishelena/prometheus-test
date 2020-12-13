@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   promethueus:
-    image: prom/prometheus
+    image: prom/prometheus:latest
     volumes:
       - ./prometheus/:/etc/prometheus/
       - prometheus_data:/prometheus
@@ -18,7 +18,7 @@ services:
       - prometheus
 
   grafana:
-    image: grafana/grafana
+    image: grafana/grafana:latest
     ports:
       - 3000:3000
     networks:
